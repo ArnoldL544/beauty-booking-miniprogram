@@ -1,4 +1,4 @@
-/* 全局仅定义背景和默认文字颜色，不再使用会挤压卡片的 .container 样式。 */
+/* Global styles set only the background and default text color; the old .container style squeezed cards. */
 page {
   background-color: #faf8f8;
   color: #303030;

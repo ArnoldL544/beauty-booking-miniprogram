@@ -1,5 +1,5 @@
 <view class="home-page">
-  <!-- 效果展示：左右滑动，保持图片完整比例。 -->
+  <!-- Results showcase: swipe left/right, images keep their full aspect ratio. -->
   <view class="section">
     <view class="section-title">效果展示</view>
     <swiper
@@ -20,7 +20,7 @@
     </view>
   </view>
 
-  <!-- 促销活动：横版卡片，图片在上、文字在下。 -->
+  <!-- Promotions: landscape cards, image on top and text below. -->
   <view class="section">
     <view class="section-title">促销活动</view>
     <view wx:if="{{promotions.length > 0}}" class="promotion-list">

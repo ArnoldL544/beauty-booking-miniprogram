@@ -1,4 +1,4 @@
-/* 首页整体两侧留白稍大，保留底部导航空间。 */
+/* Home uses slightly wider side margins and leaves room for the bottom tab bar. */
 .home-page {
   padding: 28rpx 48rpx 160rpx;
   box-sizing: border-box;
@@ -43,7 +43,7 @@
   flex-direction: column;
   gap: 20rpx;
 }
-/* 活动卡片更窄，居中排列；依旧保持横向视觉比例。 */
+/* Promotion cards are narrower and centered, still in a landscape ratio. */
 .promotion-card {
   background: #ffffff;
   width: 94%;
@@ -54,7 +54,7 @@
   padding: 14rpx;
   overflow: hidden;
 }
-/* 图片在上，下面是活动名称/优惠文案。 */
+/* Image on top, promotion name / offer text below. */
 .promotion-image {
   display: block;
   width: 100%;
@@ -73,7 +73,7 @@
   line-height: 1.5;
   margin: 8rpx 8rpx 0;
 }
-/* 尚未填入促销内容时，也用同样的横向卡片比例展示占位。 */
+/* With no promotions yet, the placeholder uses the same landscape card ratio. */
 .promotion-placeholder {
   width: 94%;
   height: 275rpx;

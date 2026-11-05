@@ -1,76 +1,78 @@
-# 美业服务预约小程序
+# Beauty Service Booking Mini Program
 
-一个为家庭美业副业开发的微信小程序：顾客可以浏览美甲、美睫、纹绣、皮肤护理和护肤品，查看价目表、选择款式，并发起预约或咨询。
+A WeChat Mini Program built for a family-run beauty side business. Customers can browse nail, lash, permanent makeup and skincare services and products, read the price list, pick a style, and send a booking or inquiry.
 
-> 项目状态：前端已完成，正在规划后端（微信云开发）。目前以开发版 / 体验版运行，未公开发布。
+> Status: the frontend is complete and the backend (WeChat Cloud Development) is being planned. It currently runs as a development / trial build and has not been publicly released.
 
-## 项目背景
+The app's interface and price data are in Chinese because its customers are in China.
 
-经营者通过朋友圈等渠道为合作的正规美容机构介绍顾客。原来报价靠发纸质价目表的照片，款式多、价格分档（进口 / 国产、按指计价、起价），顾客经常看不清、问不明白。
+## Background
 
-这个小程序把纸质价目表变成可浏览、可选择的结构化页面：顾客自己先选好项目和款式，再联系经营者，减少反复沟通。
+The owner refers customers to licensed partner beauty salons, mostly through WeChat Moments. Quotes used to be photos of a printed price list. With many styles and tiered prices (imported vs. domestic products, per-finger pricing, "from" prices), customers often couldn't read the photos or understand the pricing.
 
-医美类项目只展示合作机构的参考价目、引导顾客咨询，**不提供在线预约，也不收定金**，最终方案和价格以具备资质的医疗机构面诊为准。
+This mini program turns the printed price list into structured pages that customers can browse and choose from. They pick the service and style themselves first, then contact the owner, which cuts down the back-and-forth.
 
-## 功能
+Medical-aesthetic procedures only show the partner clinic's reference prices and direct customers to a consultation. **There is no online booking and no deposit for them.** The final plan and price are set at an in-person consultation with a licensed medical provider.
 
-| 模块 | 说明 |
+## Features
+
+| Module | Description |
 | --- | --- |
-| 首页 | 效果展示轮播、促销活动 |
-| 美容预约 | 分类 → 项目 → 款式 → 详情 → 预约，四级浏览 |
-| 价格展示 | 支持进口 / 国产两档价、固定价、起价、价格区间、按指 / 按只计价 |
-| 美甲加项 | 装饰加项（钻、珍珠、彩绘等）可按数量选择，随预约一起带入 |
-| 护肤品 | 商品列表、详情、图片预览 |
-| 收藏 | 美容项目（精确到款式和档位）与护肤品统一收藏，可分类筛选 |
-| 我的 | 订单入口、收货地址、售后、预约须知、联系商家 |
-| 自定义 TabBar | 5 个标签页，中间“美容预约”突出显示 |
+| Home | Results carousel and promotions |
+| Beauty booking | Browse category → service → style → details, then book |
+| Pricing | Imported / domestic price tiers, fixed prices, "from" prices, price ranges, per-finger / per-piece pricing |
+| Nail add-ons | Decorations (rhinestones, pearls, hand-painting, etc.) chosen by quantity and carried into the booking |
+| Skincare | Product list, product details, image preview |
+| Favorites | One list for beauty services (down to the style and price tier) and skincare products, with category filters |
+| Me | Orders, shipping addresses, after-sales, booking guide, contact the seller |
+| Custom tab bar | Five tabs, with "Beauty booking" highlighted in the middle |
 
-## 技术实现
+## Implementation
 
-- 原生微信小程序（WXML / WXSS / JavaScript），无第三方依赖
-- **数据与页面分离**：服务分类、价目表、商品都放在 `data/` 中，页面只负责读取和展示。商家改价只需改数据文件
-- **价格模型**：一个款式可以是 `price`（固定价）、`imported` / `domestic`（两档价）、`priceFrom`（起价）或 `priceText`（区间 / 面议），由 `getPriceText()` 统一转成展示文本
-- **页面间传参**：款式、档位、美甲加项通过 URL 参数传递，接收方用白名单校验（只接受已登记的加项 id，数量限制在 1–99），防止构造参数
-- **收藏**：封装在 `utils/favorites.js`，基于本地缓存，美容项目按 `服务:款式:档位` 生成唯一 key
-- 代码格式统一使用 Prettier（配置见 `.prettierrc.json`）
+- Native WeChat Mini Program (WXML / WXSS / JavaScript) with no third-party dependencies
+- **Data separated from pages**: service categories, price lists and products live in `data/`; pages only read and display them, so a price change is a data-file edit
+- **Price model**: a style can have `price` (fixed), `imported` / `domestic` (two tiers), `priceFrom` ("from" price) or `priceText` (range / on request). `getPriceText()` turns all of them into display text
+- **Passing state between pages**: the chosen style, tier and nail add-ons travel as URL parameters, and the receiving page validates them against an allowlist (only registered add-on ids, quantities limited to 1–99) so crafted parameters are rejected
+- **Favorites**: wrapped in `utils/favorites.js` on top of local storage; beauty services get a unique key of `service:style:tier`
+- Code is formatted with Prettier (see `.prettierrc.json`)
 
-## 目录结构
+## Project structure
 
 ```
-├── app.js / app.json / app.wxss   全局入口、页面路由、全局样式
-├── custom-tab-bar/                自定义底部导航
+├── app.js / app.json / app.wxss   App entry, page routes, global styles
+├── custom-tab-bar/                Custom bottom tab bar
 ├── data/
-│   ├── beauty.js                  服务分类与项目
-│   ├── price-list.js              价目表、价格格式化、美甲加项解析
-│   └── products.js                护肤品
+│   ├── beauty.js                  Service categories and items
+│   ├── price-list.js              Price lists, price formatting, nail add-on parsing
+│   └── products.js                Skincare products
 ├── utils/
-│   └── favorites.js               收藏读写
+│   └── favorites.js               Favorites storage
 ├── pages/
-│   ├── index/                     首页
-│   ├── category/ → services/ → styles/ → detail/ → booking/   预约流程
-│   ├── products/ → product-detail/                           护肤品
-│   ├── records/                   预约详情（按状态筛选）
+│   ├── index/                     Home
+│   ├── category/ → services/ → styles/ → detail/ → booking/   Booking flow
+│   ├── products/ → product-detail/                           Skincare
+│   ├── records/                   Bookings (filter by status)
 │   ├── mine/  orders/  favorites/  address/  aftersales/
 │   └── guide/  about/  contact/  profile/
-└── assets/                        图片素材
+└── assets/                        Images
 ```
 
-## 运行
+## Running it
 
-1. 安装[微信开发者工具](https://developers.weixin.qq.com/miniprogram/dev/devtools/download.html)
-2. 导入本目录，项目默认使用测试号（`touristappid`），也可以换成自己的 AppID
-3. 编译即可在模拟器中预览；点击“预览”可扫码在真机上运行
+1. Install [WeChat DevTools](https://developers.weixin.qq.com/miniprogram/dev/devtools/download.html)
+2. Import this folder. The project uses the test AppID (`touristappid`) by default; you can switch to your own AppID
+3. Compile to preview in the simulator, or click "Preview" and scan the QR code to run it on a phone
 
-## 后续计划
+## Roadmap
 
-- [ ] 接入微信云开发：`wx.login` 登录，预约写入云数据库，初始状态为“待审核”
-- [ ] “预约详情”读取当前用户自己的记录（待审核 / 已确认 / 已完成 / 已取消）
-- [ ] 商家管理页：仅经营者账号可进入，审核和更新预约状态
-- [ ] 为预约状态流转和权限校验编写自动化测试
-- [ ] 替换临时图片，补充商品功能介绍
+- [ ] Connect WeChat Cloud Development: sign in with `wx.login` and save bookings to the cloud database with an initial status of "pending review"
+- [ ] Have the "Bookings" page load the current user's own records (pending / confirmed / completed / cancelled)
+- [ ] Seller admin page, open only to the owner's account, for reviewing bookings and updating their status
+- [ ] Automated tests for booking status transitions and permission checks
+- [ ] Replace placeholder images and add product descriptions
 
-## 说明
+## Notes
 
-价目表数据来自合作机构的纸质价目表，仅供参考，实际价格以到店或面诊确认为准。
+Price data comes from the partner salons' printed price lists and is for reference only; actual prices are confirmed in store or at consultation.
 
-为保护顾客隐私，公开版本做了以下处理：首页效果展示使用占位图，没有任何真实顾客照片；商家名称已隐去。美容项目封面为 AI 生成的示意图，护肤品图片来自对应品牌的商品页，版权归原品牌所有。
+To protect customer privacy, the public version uses placeholder images on the home page, with no real customer photos, and the business name has been removed. Beauty service covers are AI-generated illustrations; skincare product images come from the brands' product pages, and their copyright belongs to those brands.

@@ -11,7 +11,7 @@ Page({
   onShow() {
     const tabBar = this.getTabBar && this.getTabBar()
     if (tabBar) tabBar.setData({ selected: 3 })
-    // TODO: 接入后端后从数据库读取当前用户的预约记录。
+    // TODO: once the backend exists, load the current user's bookings from the database.
     this.setData({ allRecords: [] })
     this.refreshList()
   },

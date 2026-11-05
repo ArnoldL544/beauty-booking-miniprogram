@@ -1,5 +1,5 @@
-// 价格来源：合作美容院纸质价目表（2026-10-13 录入）。
-// "进口"/"国产"沿用价目表原文。价目表上没有的价格一律不填，页面显示"价格待确认"。
+// Price source: the partner salon's printed price list (entered 2026-10-13).
+// "Imported"/"domestic" tiers follow the original list. Prices missing from the list are left empty and the page shows "price to be confirmed".
 const styleLists = {
   brows: [
     { id: 'standard-line', name: '普通线条眉', imported: 1880, domestic: 1680 },
@@ -26,8 +26,8 @@ const styleLists = {
   ]
 }
 
-// 美甲价目表（2026-10-13 录入），为商家标价，实际成交价以到店确认为准。
-// 加项按"/指""/只"计价，含价格区间，因此不自动计算订单总价。
+// Nail price list (entered 2026-10-13). These are listed prices; the final price is confirmed in store.
+// Add-ons are priced per finger / per piece and some are ranges, so the order total is not calculated automatically.
 styleLists.manicure = [
   { id: 'solid-color', name: '纯色美甲', price: 68 },
   { id: 'solid-glitter', name: '纯色闪粉', price: 68 },
@@ -52,8 +52,8 @@ const nailExtras = [
   { id: 'dried-flower', name: '干花', price: 10, unit: '指', priceText: '¥10/指' },
   { id: 'butterfly', name: '蝴蝶', price: 10, unit: '只', priceText: '¥10/只' }
 ]
-// 医美：仅供咨询及面诊参考，不提供在线预约，也不收定金。
-// 眼部 19 项（2026-10-14 复核），项目名保留价目表印刷原文。
+// Medical aesthetics: reference prices for consultation only. No online booking and no deposit.
+// Eye procedures, 19 items (re-checked 2026-10-14). Item names keep the printed wording.
 styleLists['medical-eyes'] = [
   { id: 'me-double', name: 'ME双眼皮', price: 3880 },
   { id: 'nano-double', name: '纳米无痕双眼皮', price: 4400 },
@@ -82,7 +82,7 @@ styleLists['medical-lips'] = [
   { id: 'philtrum-shortening', name: '人中缩短', price: 11600 },
   { id: 'philtrum-depth', name: '人中窝加深', price: 6800 }
 ]
-// 无痕水玻璃拉皮 4 项（2026-10-14 复核），项目名保留价目表印刷原文。
+// Scarless face-lift, 4 items (re-checked 2026-10-14). Item names keep the printed wording.
 styleLists['medical-lift'] = [
   { id: 'neck-lift', name: '小切口颈部拉皮', price: 12800 },
   { id: 'under-ear-lift', name: '小切口耳下拉皮', price: 15800 },
@@ -120,7 +120,7 @@ styleLists['medical-other'] = [
   { id: 'face-sculpt', name: '维密脂雕面部吸脂', price: 23800 },
   { id: 'single-sculpt', name: '维密脂雕单部位吸脂', price: 6800 },
   { id: 'abdominal-wall', name: '腹壁整形', priceFrom: 50000, priceText: '¥50,000 起' },
-  // 隆胸：价目表照片上该项价格看不清，暂显示"面诊确认价格"。
+  // Breast augmentation: the price is unreadable in the price-list photo, so the page shows "price confirmed at consultation".
   { id: 'breast-consult', name: '隆胸（价格待确认）', priceText: '面诊确认价格' }
 ]
 const priceNotes = {
@@ -170,8 +170,8 @@ function getPrice(serviceId, styleId, tier) {
   if (tier === 'domestic') return item.domestic
   return null
 }
-// 按已登记的美甲装饰加项 id 解析数量；价格区间与计量单位均保留原表。
-// 这里只记录顾客意向，不依据范围价格计算最终金额。
+// Parse quantities only for registered nail add-on ids; price ranges and units stay as on the original list.
+// This records the customer's choice only; no final amount is calculated from range prices.
 function parseNailExtraSelection(input) {
   if (!input) return []
   let entries

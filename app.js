@@ -1,10 +1,10 @@
 // app.js
 App({
   onLaunch: function () {
-    // 小程序启动时执行的逻辑
+    // Runs when the mini program launches
     console.log('小程序启动了')
   },
   globalData: {
-    // 全局数据
+    // Global data
   }
 })

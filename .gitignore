@@ -13,8 +13,8 @@ $RECYCLE.BIN/
 # Node.js
 node_modules/
 
-# 微信开发者工具个人配置（每台电脑不同）
+# WeChat DevTools personal settings (differ per machine)
 project.private.config.json
 
-# 本地 AI 对话记录
+# Local AI chat history
 .prompt-context

@@ -1,6 +1,6 @@
-// 服务分类与项目。价格见 price-list.js（来源：合作美容院纸质价目表）。
-// 部分封面为临时图片，并非真实顾客案例，正式使用前需换成已授权图片。
-// action: 'booking' 可在线预约；'contact' 为医美项目，只做咨询转介，不在线预约。
+// Service categories and items. Prices live in price-list.js (source: the partner salon's printed price list).
+// Some covers are placeholder images, not real customer photos; replace them with licensed images before launch.
+// action: 'booking' can be booked online; 'contact' marks medical-aesthetic items, which are consultation referrals only, with no online booking.
 const categories = [
   {
     id: 'nails-lashes',

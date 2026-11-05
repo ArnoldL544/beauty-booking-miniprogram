@@ -9,7 +9,7 @@
     </view>
   </view>
 
-  <!-- 先显示功能介绍，再显示图片；没有介绍时显示"待补充"。 -->
+  <!-- Show the product details first, then images; show "coming soon" when there are no details. -->
   <view class="section">
     <view class="section-title">产品功能介绍</view>
     <view wx:if="{{product.description}}" class="description">{{product.description}}</view>

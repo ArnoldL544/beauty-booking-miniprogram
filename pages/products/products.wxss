@@ -1,4 +1,4 @@
-/* 护肤品：一排一个商品、上下滚动，三个商品完全统一海报尺寸。 */
+/* Skincare: one product per row, vertical scroll, all product posters the same size. */
 .products-page {
   padding: 28rpx 48rpx 170rpx;
   box-sizing: border-box;

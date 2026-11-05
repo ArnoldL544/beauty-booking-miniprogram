@@ -1,5 +1,5 @@
-// 收藏夹：保存在本地缓存中，美容项目和护肤品共用一个列表。
-// 每条记录：{ key, type: 'service' | 'product', title, subtitle, image, url }
+// Favorites: stored in local storage; beauty services and skincare products share one list.
+// Each entry: { key, type: 'service' | 'product', title, subtitle, image, url }
 const STORAGE_KEY = 'beauty_favorites_v1'
 
 function getFavorites() {
@@ -15,7 +15,7 @@ function isFavorite(key) {
   return getFavorites().some((item) => item.key === key)
 }
 
-// 已收藏则移除，未收藏则加入；返回操作后是否处于收藏状态。
+// Removes the item if already saved, otherwise adds it; returns whether it is saved afterwards.
 function toggleFavorite(entry) {
   const list = getFavorites()
   const exists = list.some((item) => item.key === entry.key)

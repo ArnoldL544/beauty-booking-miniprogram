@@ -117,7 +117,7 @@
   min-width: 0;
 }
 
-/* 美甲加项：名称和单价在上，数量步进按钮在下，避免小屏幕挤压。 */
+/* Nail add-ons: name and unit price on top, quantity stepper below, so small screens don't get cramped. */
 .extra-row {
   flex-direction: column;
   align-items: stretch;

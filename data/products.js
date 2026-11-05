@@ -1,5 +1,5 @@
-// 护肤品数据。图片和标价来自商品页截图，需商家确认后才作为正式售价。
-// description 留空表示功能介绍尚待商家提供。
+// Skincare products. Images and prices come from product-page screenshots and need the seller's confirmation before they become official prices.
+// An empty description means the seller has not provided product details yet.
 const products = [
   {
     id: 'aurora-set',
