@@ -1,0 +1,9 @@
+<view class="contact-page">
+  <view class="top">联系我们</view>
+  <view class="card">
+    <view class="line-title">购买护肤品或咨询美容项目</view>
+    <view class="line-sub">具体客服微信、电话或小程序客服入口尚未确认。正式渠道设置完成后会在这里提供联系方式。</view>
+    <button class="disabled" bindtap="contact">联系商家 · 待配置</button>
+  </view>
+  <view class="note">普通微信小程序无法通过公开接口直接跳转到指定个人的微信名片添加好友。</view>
+</view>

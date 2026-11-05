@@ -1,0 +1,38 @@
+<view class="home-page">
+  <!-- 效果展示：左右滑动，保持图片完整比例。 -->
+  <view class="section">
+    <view class="section-title">效果展示</view>
+    <swiper
+      wx:if="{{comparisonImages.length > 0}}"
+      class="comparison-swiper"
+      indicator-dots="{{comparisonImages.length > 1}}"
+      circular="{{comparisonImages.length > 1}}"
+      autoplay="{{comparisonImages.length > 1}}"
+      interval="5500"
+      duration="350"
+    >
+      <swiper-item wx:for="{{comparisonImages}}" wx:key="id">
+        <image class="comparison-image" src="{{item.src}}" mode="aspectFit" />
+      </swiper-item>
+    </swiper>
+    <view wx:else class="comparison-placeholder">
+      <text>效果对比图待添加</text>
+    </view>
+  </view>
+
+  <!-- 促销活动：横版卡片，图片在上、文字在下。 -->
+  <view class="section">
+    <view class="section-title">促销活动</view>
+    <view wx:if="{{promotions.length > 0}}" class="promotion-list">
+      <view class="promotion-card" wx:for="{{promotions}}" wx:key="id">
+        <image wx:if="{{item.image}}" class="promotion-image" src="{{item.image}}" mode="aspectFill" />
+        <view wx:if="{{item.title}}" class="promotion-title">{{item.title}}</view>
+        <view wx:if="{{item.description}}" class="promotion-description">{{item.description}}</view>
+      </view>
+    </view>
+    <view wx:else class="promotion-placeholder">
+      <view class="promotion-placeholder-image">活动图片待添加</view>
+      <view class="promotion-placeholder-caption">活动文案待添加</view>
+    </view>
+  </view>
+</view>

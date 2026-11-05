@@ -1,0 +1,24 @@
+<view class="aftersales-page">
+  <view class="heading">申请售后</view>
+  <view class="hint">售后申请将由管理员人工处理。不同美容项目的售后期限尚待确定。</view>
+  <view class="form">
+    <view class="label">售后类型</view>
+    <view class="types">
+      <view wx:for="{{typeOptions}}" wx:key="id" class="type {{type===item.id?'chosen':''}}" data-id="{{item.id}}" bindtap="chooseType">{{item.label}}</view>
+    </view>
+    <view class="label">关联{{type==='beauty'?'美容预约':'护肤品订单'}}</view>
+    <view class="readonly">后端接通后可选择自己的历史记录</view>
+    <view class="label">问题描述</view>
+    <textarea class="textinput" placeholder="请描述需要协助解决的问题" maxlength="600" value="{{description}}" bindinput="input" />
+    <view class="label">照片（最多3张）</view>
+    <view class="images">
+      <view wx:for="{{images}}" wx:key="*this" class="image-wrap" data-src="{{item}}" bindtap="preview">
+        <image class="image" src="{{item}}" mode="aspectFill"/>
+      </view>
+      <view wx:if="{{images.length !== 3}}" class="image-add" bindtap="addImages">＋<text>选照片</text>
+      </view>
+    </view>
+    <button class="submit" bindtap="submit">提交售后申请（演示）</button>
+  </view>
+  <view class="notice">当前仅实现前端表单和本地照片预览，不会上传图片或创建真实售后申请。纹眉、纹唇洗色另收费，具体价格待确认。</view>
+</view>

@@ -1,0 +1,51 @@
+.profile-page {
+  padding: 55rpx 42rpx;
+  text-align: center;
+}
+.avatar {
+  width: 150rpx;
+  height: 150rpx;
+  background: #f4e6e9;
+  color: #bb8993;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 61rpx;
+  margin: 0 auto;
+}
+.heading {
+  font-size: 38rpx;
+  font-weight: 650;
+  margin-top: 18rpx;
+}
+.sub {
+  font-size: 24rpx;
+  color: #999;
+  margin: 12rpx 0 35rpx;
+}
+.card {
+  background: #fff;
+  border-radius: 20rpx;
+  padding: 0 28rpx;
+}
+.row {
+  display: flex;
+  justify-content: space-between;
+  padding: 34rpx 0;
+  border-bottom: 1rpx solid #f3f3f3;
+  font-size: 27rpx;
+}
+.row:last-child {
+  border: 0;
+}
+.unconfigured {
+  color: #aaa;
+}
+.tip {
+  font-size: 23rpx;
+  color: #999;
+  line-height: 1.8;
+  text-align: left;
+  margin-top: 23rpx;
+}

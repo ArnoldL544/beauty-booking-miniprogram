@@ -1,0 +1,23 @@
+<view class="fav-page">
+  <view class="fav-title">我的收藏</view>
+  <view class="fav-caption">已收藏的具体款式、搭配和护肤品</view>
+  <view class="fav-tabs">
+    <view wx:for="{{tabs}}" wx:key="id" class="fav-tab {{active===item.id?'selected':''}}" data-id="{{item.id}}" bindtap="setTab">{{item.name}}</view>
+  </view>
+  <view wx:if="{{visible.length}}" class="fav-list">
+    <view wx:for="{{visible}}" wx:key="key" class="fav-card">
+      <view class="fav-main" data-index="{{index}}" bindtap="open">
+        <image wx:if="{{item.image}}" src="{{item.image}}" mode="aspectFill" class="cover"/>
+        <view wx:else class="cover no-cover">♡</view>
+        <view class="info">
+          <text class="name">{{item.title}}</text><text class="sub">{{item.subtitle}}</text><text class="view">查看详情 ›</text>
+        </view>
+      </view>
+      <view class="remove" data-key="{{item.key}}" bindtap="remove">取消收藏</view>
+    </view>
+  </view>
+  <view wx:else class="fav-empty">
+    <text class="heart">♡</text><text class="empty-title">还没有收藏内容</text><text class="empty-info">在护肤品或具体美容款式详情中点击爱心，就能先保存到这里。美甲需要选择完整款式和颜色后才能收藏。</text>
+  </view>
+  <view class="foot">当前收藏仅保存在本机，用于前端测试。后续接入账户和云数据库后再实现跨设备同步。</view>
+</view>

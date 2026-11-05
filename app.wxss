@@ -1,0 +1,5 @@
+/* 全局仅定义背景和默认文字颜色，不再使用会挤压卡片的 .container 样式。 */
+page {
+  background-color: #faf8f8;
+  color: #303030;
+}

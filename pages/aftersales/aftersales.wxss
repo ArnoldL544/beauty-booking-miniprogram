@@ -1,0 +1,100 @@
+.aftersales-page {
+  padding: 32rpx 42rpx 120rpx;
+}
+.heading {
+  font-size: 40rpx;
+  font-weight: 700;
+}
+.hint {
+  font-size: 25rpx;
+  color: #999;
+  line-height: 1.7;
+  margin: 12rpx 0 25rpx;
+}
+.form {
+  background: #fff;
+  border-radius: 20rpx;
+  padding: 30rpx;
+}
+.label {
+  font-size: 28rpx;
+  font-weight: 600;
+  margin: 20rpx 0 16rpx;
+}
+.types {
+  display: flex;
+  gap: 14rpx;
+}
+.type {
+  background: #f5f3f3;
+  border: 1rpx solid #eee;
+  border-radius: 32rpx;
+  padding: 15rpx 24rpx;
+  font-size: 25rpx;
+  color: #777;
+}
+.type.chosen {
+  background: #fff0f0;
+  color: #da4148;
+  border-color: #e64340;
+}
+.readonly {
+  background: #faf7f7;
+  border-radius: 12rpx;
+  padding: 22rpx;
+  color: #aaa;
+  font-size: 25rpx;
+}
+.textinput {
+  width: 100%;
+  min-height: 170rpx;
+  border: 1rpx solid #e9e3e3;
+  border-radius: 13rpx;
+  padding: 20rpx;
+  box-sizing: border-box;
+  font-size: 27rpx;
+}
+.images {
+  display: flex;
+  gap: 14rpx;
+  flex-wrap: wrap;
+}
+.image-wrap,
+.image-add {
+  width: 145rpx;
+  height: 145rpx;
+  border-radius: 13rpx;
+  overflow: hidden;
+}
+.image {
+  width: 100%;
+  height: 100%;
+}
+.image-add {
+  border: 2rpx dashed #e5dada;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  color: #c1989c;
+  font-size: 40rpx;
+}
+.image-add text {
+  font-size: 22rpx;
+}
+.submit {
+  margin-top: 35rpx;
+  background: #e64340;
+  color: #fff;
+  border-radius: 16rpx;
+  font-size: 28rpx;
+}
+.submit::after {
+  border: 0;
+}
+.notice {
+  font-size: 23rpx;
+  color: #999;
+  line-height: 1.8;
+  margin-top: 20rpx;
+}

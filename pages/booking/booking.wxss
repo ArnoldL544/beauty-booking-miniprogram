@@ -1,0 +1,72 @@
+.page {
+  padding: 34rpx 48rpx 160rpx;
+}
+.title {
+  font-size: 42rpx;
+  font-weight: 600;
+  margin-bottom: 30rpx;
+}
+.service-card {
+  padding: 26rpx;
+  background: #fff;
+  border-radius: 16rpx;
+  margin-bottom: 28rpx;
+  font-size: 30rpx;
+}
+.status {
+  font-size: 24rpx;
+  color: #999;
+  margin-top: 12rpx;
+}
+.medical-tip {
+  background: #fff0f0;
+  padding: 20rpx;
+  border-radius: 12rpx;
+  color: #8e6262;
+  font-size: 24rpx;
+  margin-bottom: 22rpx;
+  line-height: 1.6;
+}
+input,
+.picker {
+  border: 1rpx solid #e7e1e1;
+  background: #fff;
+  padding: 22rpx;
+  margin-bottom: 24rpx;
+  border-radius: 14rpx;
+  font-size: 28rpx;
+}
+.picker {
+  color: #555;
+}
+.btn {
+  background: #2778ef;
+  color: #fff;
+  border-radius: 16rpx;
+  font-size: 30rpx;
+}
+
+.order-price {
+  color: #e64340;
+  margin-top: 12rpx;
+  font-size: 28rpx;
+}
+
+.nail-booking-extras {
+  border-top: 1rpx solid #f0eaea;
+  margin-top: 20rpx;
+  padding-top: 18rpx;
+}
+.nail-booking-title {
+  font-size: 26rpx;
+  font-weight: 600;
+  margin-bottom: 12rpx;
+}
+.nail-booking-row {
+  display: flex;
+  justify-content: space-between;
+  gap: 12rpx;
+  font-size: 24rpx;
+  color: #555;
+  margin: 12rpx 0;
+}

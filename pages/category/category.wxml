@@ -1,0 +1,10 @@
+<view class="page">
+  <view class="page-title">美容预约</view>
+  <view class="category-grid">
+    <view class="category-card" wx:for="{{categories}}" wx:key="id" data-id="{{item.id}}" bindtap="goCategory">
+      <image class="category-image" src="{{item.cover}}" mode="aspectFill" lazy-load />
+      <view class="category-label">{{item.name}}</view>
+    </view>
+  </view>
+  <view class="hint">选择分类，查看具体服务项目</view>
+</view>

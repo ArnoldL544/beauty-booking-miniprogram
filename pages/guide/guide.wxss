@@ -1,0 +1,37 @@
+.info-page {
+  padding: 32rpx 42rpx 100rpx;
+}
+.intro {
+  margin: 8rpx 0 28rpx;
+}
+.intro-title {
+  font-size: 39rpx;
+  font-weight: 700;
+}
+.intro-small {
+  color: #aaa;
+  font-size: 25rpx;
+  margin-top: 11rpx;
+}
+.card {
+  border-radius: 19rpx;
+  background: #fff;
+  padding: 30rpx;
+  margin-bottom: 20rpx;
+}
+.section-title {
+  font-size: 30rpx;
+  font-weight: 600;
+  margin-bottom: 16rpx;
+}
+.para {
+  font-size: 26rpx;
+  color: #666;
+  line-height: 1.9;
+}
+.note {
+  color: #999;
+  font-size: 23rpx;
+  line-height: 1.8;
+  padding: 7rpx;
+}

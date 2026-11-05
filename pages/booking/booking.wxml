@@ -1,0 +1,28 @@
+<view class="page">
+  <view class="title">预约信息</view>
+  <view class="service-card">
+    <view>预约项目：{{serviceName || '待选择'}}</view>
+    <view wx:if="{{styleName}}">选择款式：{{styleName}}</view>
+    <view wx:if="{{selectedTierName}}">价格方案：{{selectedTierName}}</view>
+    <view class="order-price">项目标价：{{priceText}}</view>
+    <view wx:if="{{priceNote}}" class="status">{{priceNote}}</view>
+    <view wx:if="{{selectedNailExtras.length}}" class="nail-booking-extras">
+      <view class="nail-booking-title">已选美甲装饰加项：</view>
+      <view wx:for="{{selectedNailExtras}}" wx:key="id" class="nail-booking-row">
+        <text>{{item.name}} × {{item.quantity}}</text><text>{{item.priceText}}</text>
+      </view>
+      <view class="status">额外费用按实际数量与商家确认，不视为已确定的总价。</view>
+    </view>
+    <view class="status">目前是页面演示，暂不接收真实预约或定金。</view>
+  </view>
+  <view class="medical-tip" wx:if="{{medicalNotice}}">注射类项目须由有相应资质的医疗机构评估及提供服务。此表单仅为咨询意向演示。</view>
+  <input placeholder="请输入姓名" value="{{username}}" bindinput="inputName" />
+  <input placeholder="请输入联系电话" type="text" value="{{phone}}" bindinput="inputPhone" />
+  <picker mode="date" start="{{minDate}}" bindchange="changeDate">
+    <view class="picker">期望日期：{{date || '请选择日期'}}</view>
+  </picker>
+  <picker mode="time" bindchange="changeTime">
+    <view class="picker">期望时间：{{time || '请选择时间'}}</view>
+  </picker>
+  <button class="btn" bindtap="submitBooking">提交预约（演示）</button>
+</view>

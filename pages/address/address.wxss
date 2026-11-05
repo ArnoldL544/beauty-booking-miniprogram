@@ -1,0 +1,46 @@
+.addr-page {
+  padding: 35rpx 42rpx 130rpx;
+}
+.title {
+  font-weight: 700;
+  font-size: 39rpx;
+  margin-bottom: 24rpx;
+}
+.empty {
+  background: #fff;
+  border-radius: 22rpx;
+  padding: 70rpx 30rpx;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.icon {
+  font-size: 75rpx;
+  color: #c49da8;
+}
+.empty-title {
+  font-size: 31rpx;
+  margin: 15rpx 0;
+  font-weight: 600;
+}
+.hint,
+.warn {
+  font-size: 25rpx;
+  color: #999;
+  line-height: 1.8;
+  text-align: center;
+}
+.add {
+  background: #e64340;
+  color: #fff;
+  border-radius: 16rpx;
+  margin-top: 30rpx;
+  font-size: 28rpx;
+}
+.add::after {
+  border: 0;
+}
+.warn {
+  margin-top: 25rpx;
+  font-size: 23rpx;
+}

@@ -1,0 +1,19 @@
+<view class="page">
+  <view class="page-title">{{categoryName}}</view>
+  <view class="service-list">
+    <view class="service-card" wx:for="{{items}}" wx:key="id" data-id="{{item.id}}" bindtap="openService">
+      <image wx:if="{{item.cover}}" class="service-photo" src="{{item.cover}}" mode="aspectFill" lazy-load />
+      <view class="service-footer">
+        <view class="service-meta">
+          <view class="service-name">{{item.name}}</view>
+          <view class="service-price" wx:if="{{item.priceText}}">{{item.priceText}}</view>
+          <view class="service-note" wx:if="{{item.needsStyle}}">{{item.action === 'contact' ? '查看细分项目与参考价格 · 面诊确认' : '选择款式后查看详情'}}</view>
+          <view class="service-note" wx:elif="{{item.action === 'contact'}}">查看介绍及联系美容院</view>
+          <view class="service-note" wx:else>点击查看项目详情</view>
+        </view>
+        <view class="arrow">›</view>
+      </view>
+    </view>
+  </view>
+  <view class="page-hint">部分项目暂不配图片。所列价格来自商家纸质价目表，医美项目仅供咨询，具体方案和费用以合作医疗机构面诊为准。</view>
+</view>

@@ -1,0 +1,91 @@
+/* 护肤品：一排一个商品、上下滚动，三个商品完全统一海报尺寸。 */
+.products-page {
+  padding: 28rpx 48rpx 170rpx;
+  box-sizing: border-box;
+}
+.product-list {
+  display: flex;
+  flex-direction: column;
+  gap: 26rpx;
+}
+.product-card {
+  overflow: hidden;
+  border-radius: 22rpx;
+  background: #fff;
+  box-shadow: 0 4rpx 18rpx rgba(0, 0, 0, 0.045);
+}
+.product-cover {
+  display: block;
+  width: 100%;
+  height: 485rpx;
+  background: #f1eded;
+}
+.product-cover-placeholder {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background: #f0ecec;
+  color: #8b8282;
+  box-sizing: border-box;
+}
+.placeholder-title {
+  font-size: 32rpx;
+  font-weight: 500;
+}
+.placeholder-hint {
+  color: #a9a0a0;
+  font-size: 23rpx;
+  margin-top: 16rpx;
+}
+.product-info {
+  min-height: 112rpx;
+  padding: 20rpx 26rpx;
+  box-sizing: border-box;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 18rpx;
+}
+.product-left {
+  min-width: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 7rpx;
+}
+.product-name {
+  color: #282828;
+  font-size: 31rpx;
+  font-weight: 600;
+}
+.product-brand {
+  color: #858585;
+  font-size: 22rpx;
+}
+.product-right {
+  display: flex;
+  align-items: center;
+  gap: 12rpx;
+  flex-shrink: 0;
+}
+.product-price {
+  font-size: 26rpx;
+  color: #df4c51;
+}
+.product-arrow {
+  color: #888;
+  font-size: 42rpx;
+  line-height: 1;
+}
+
+.price-wrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  gap: 2rpx;
+}
+.price-caption {
+  font-size: 18rpx;
+  color: #aaa;
+  white-space: nowrap;
+}

@@ -1,0 +1,47 @@
+<view class="page">
+  <view class="service-title">{{styleName || name}}</view>
+  <image wx:if="{{cover}}" class="hero" src="{{cover}}" mode="aspectFill" />
+  <view wx:if="{{favoritable}}" class="favorite-service" bindtap="toggleFavorite">
+    <text class="favorite-heart">{{isFavorite ? "♥" : "♡"}}</text>{{isFavorite ? "已收藏" : "收藏此具体项目或款式"}}</view>
+  <view class="section" wx:if="{{styleId || priceLabel}}">
+    <view class="section-title">项目价格</view>
+    <view wx:if="{{priceOptions.length}}">
+      <view class="choice-hint">请选择价目表中的进口或国产方案：</view>
+      <view class="tier-list">
+        <view wx:for="{{priceOptions}}" wx:key="tier" class="tier-option {{selectedTier === item.tier ? 'tier-selected' : ''}}" data-tier="{{item.tier}}" bindtap="selectTier">
+          <text>{{item.name}}</text><text>{{item.label}}</text>
+        </view>
+      </view>
+    </view>
+    <view wx:else class="fixed-price">{{priceLabel}}</view>
+    <view class="price-note" wx:if="{{extraNote}}">{{extraNote}}</view>
+  </view>
+  <view class="section" wx:if="{{selectedNailExtras.length}}">
+    <view class="section-title">已选美甲装饰加项</view>
+    <view class="nail-selected-row" wx:for="{{selectedNailExtras}}" wx:key="id">
+      <text>{{item.name}} × {{item.quantity}}</text>
+      <text class="nail-selected-price">{{item.priceText}}</text>
+    </view>
+    <view class="price-note">含区间价及按指/按只计费项，具体总价由商家确认。</view>
+  </view>
+  <view class="medical-notice" wx:if="{{isMedical}}">医美项目属于医疗服务。这里的纸质价目表价格仅供咨询参考，具体适用性、方案及最终费用需由有资质的医疗机构面诊确定。</view>
+  <view class="section">
+    <view class="section-title">项目介绍</view>
+    <view class="placeholder-text">项目介绍待补充</view>
+  </view>
+  <view class="section" wx:if="{{!isMedical}}">
+    <view class="section-title">效果对比图</view>
+    <view class="comparison-placeholder">前后对比图待提供</view>
+    <view class="gallery-placeholder">
+      <view class="mini-placeholder">图片待添加</view>
+      <view class="mini-placeholder">图片待添加</view>
+      <view class="mini-placeholder">图片待添加</view>
+    </view>
+  </view>
+  <view wx:if="{{awaitsStyle}}" class="style-note">该项目需要先选择具体款式。请返回款式列表选择。</view>
+  <view class="bottom-action">
+    <button wx:if="{{action === 'contact'}}" class="btn contact-btn" bindtap="contactClinic">联系美容院</button>
+    <button wx:elif="{{awaitsStyle}}" class="btn disabled-btn" disabled>请先选择款式</button>
+    <button wx:else class="btn booking-btn" bindtap="goBooking">立即预约</button>
+  </view>
+</view>

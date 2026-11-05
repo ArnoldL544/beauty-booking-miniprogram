@@ -1,0 +1,50 @@
+<view class="page">
+  <view class="title">{{serviceName}} · 选择款式</view>
+  <image wx:if="{{cover}}" src="{{cover}}" mode="aspectFill" class="cover" />
+  <view class="notice" wx:if="{{hasPrices}}">以下项目与价格来自商家纸质价目表。{{isMedical ? "医美服务需先咨询并面诊确认，当前不开放线上手术预约。" : "选择具体款式后查看详情。"}}</view>
+  <view class="notice" wx:else>具体款式、图片和价格待确认，目前只是预留位置。</view>
+  <view class="style-list" wx:if="{{hasPrices}}">
+    <view class="style-item" wx:for="{{variants}}" wx:key="id" data-id="{{item.id}}" bindtap="chooseStyle">
+      <view wx:if="{{!noImages}}" class="style-image">
+        <text>款式照片
+待提供</text>
+      </view>
+      <view class="style-text">
+        <view class="name">{{item.name}}</view>
+        <view class="price">{{item.priceLabel}}</view>
+      </view>
+      <view class="arrow">›</view>
+    </view>
+  </view>
+  <view class="style-list" wx:else>
+    <view class="style-item" wx:for="{{slots}}" wx:key="*this" bindtap="pendingStyle">
+      <view class="style-image">
+        <text>款式图片待添加</text>
+      </view>
+      <view class="style-text">
+        <view class="name">款式待添加</view>
+        <view class="price">价格待定</view>
+      </view>
+      <view class="arrow">›</view>
+    </view>
+  </view>
+  <view wx:if="{{showNailExtras}}" class="extra-section">
+    <view class="extra-title">美甲装饰加项</view>
+    <view class="extra-hint">点击 + / − 选择数量。按指、按只收费及价格区间保留原价目表；最终金额需商家确认。</view>
+    <view wx:for="{{nailExtras}}" wx:key="id" class="extra-row">
+      <view class="extra-main">
+        <text class="extra-name">{{item.name}}</text>
+        <text class="extra-price">{{item.priceText}}</text>
+      </view>
+      <view class="extra-counter">
+        <button class="extra-step extra-minus {{item.quantity === 0 ? 'extra-disabled' : ''}}" data-id="{{item.id}}" data-delta="-1" catchtap="changeNailExtra" disabled="{{item.quantity === 0}}" aria-label="减少{{item.name}}数量">−</button>
+        <text class="extra-quantity">{{item.quantity}}</text>
+        <button class="extra-step extra-plus {{item.quantity >= 99 ? 'extra-disabled' : ''}}" data-id="{{item.id}}" data-delta="1" catchtap="changeNailExtra" disabled="{{item.quantity >= 99}}" aria-label="增加{{item.name}}数量">+</button>
+      </view>
+    </view>
+    <view class="extra-count-hint">已选装饰数量：{{selectedExtraCount}}。选好款式进入详情后会保留数量。</view>
+  </view>
+  <view class="notice" wx:if="{{notes}}">{{notes}}</view>
+  <button class="overview-btn" bindtap="viewOverview">先查看项目介绍</button>
+  <view class="footer-hint">本次新增项目暂不放图片。医美仅提供咨询，其他预约仍为前端演示。</view>
+</view>

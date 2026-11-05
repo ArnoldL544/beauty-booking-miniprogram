@@ -1,0 +1,37 @@
+.about-page {
+  padding: 35rpx 42rpx 110rpx;
+}
+.banner {
+  background: #f4e9ec;
+  border-radius: 25rpx;
+  text-align: center;
+  padding: 55rpx 20rpx;
+  margin-bottom: 23rpx;
+}
+.brand {
+  font-size: 52rpx;
+  font-weight: 700;
+  color: #734551;
+  letter-spacing: 8rpx;
+}
+.subtitle {
+  color: #ae8a97;
+  font-size: 24rpx;
+  margin-top: 18rpx;
+}
+.card {
+  padding: 30rpx;
+  border-radius: 18rpx;
+  background: #fff;
+  margin-bottom: 20rpx;
+}
+.title {
+  font-size: 29rpx;
+  font-weight: 600;
+  margin-bottom: 14rpx;
+}
+.text {
+  font-size: 26rpx;
+  color: #777;
+  line-height: 1.8;
+}

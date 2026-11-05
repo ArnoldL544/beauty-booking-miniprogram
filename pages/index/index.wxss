@@ -1,0 +1,107 @@
+/* 首页整体两侧留白稍大，保留底部导航空间。 */
+.home-page {
+  padding: 28rpx 48rpx 160rpx;
+  box-sizing: border-box;
+}
+.section {
+  width: 100%;
+  box-sizing: border-box;
+  margin-bottom: 36rpx;
+}
+.section-title {
+  font-size: 34rpx;
+  font-weight: 600;
+  color: #303030;
+  margin-bottom: 20rpx;
+}
+.comparison-swiper,
+.comparison-placeholder {
+  width: 100%;
+  height: 720rpx;
+  border-radius: 20rpx;
+  overflow: hidden;
+  box-sizing: border-box;
+}
+.comparison-swiper {
+  background: #f0e9e9;
+}
+.comparison-image {
+  display: block;
+  width: 100%;
+  height: 100%;
+}
+.comparison-placeholder {
+  background: #f1ebeb;
+  color: #a39090;
+  font-size: 27rpx;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.promotion-list {
+  display: flex;
+  flex-direction: column;
+  gap: 20rpx;
+}
+/* 活动卡片更窄，居中排列；依旧保持横向视觉比例。 */
+.promotion-card {
+  background: #ffffff;
+  width: 94%;
+  margin-left: auto;
+  margin-right: auto;
+  box-sizing: border-box;
+  border-radius: 18rpx;
+  padding: 14rpx;
+  overflow: hidden;
+}
+/* 图片在上，下面是活动名称/优惠文案。 */
+.promotion-image {
+  display: block;
+  width: 100%;
+  height: 190rpx;
+  border-radius: 12rpx;
+  background: #f4eeee;
+}
+.promotion-title {
+  font-size: 30rpx;
+  font-weight: 600;
+  margin: 12rpx 8rpx 0;
+}
+.promotion-description {
+  font-size: 26rpx;
+  color: #777777;
+  line-height: 1.5;
+  margin: 8rpx 8rpx 0;
+}
+/* 尚未填入促销内容时，也用同样的横向卡片比例展示占位。 */
+.promotion-placeholder {
+  width: 94%;
+  height: 275rpx;
+  margin-left: auto;
+  margin-right: auto;
+  padding: 14rpx;
+  box-sizing: border-box;
+  border-radius: 18rpx;
+  background: #ffffff;
+  display: flex;
+  flex-direction: column;
+  align-items: stretch;
+}
+.promotion-placeholder-image {
+  height: 185rpx;
+  background: #f4eeee;
+  color: #aaaaaa;
+  border-radius: 12rpx;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 26rpx;
+}
+.promotion-placeholder-caption {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  padding-left: 10rpx;
+  color: #999999;
+  font-size: 24rpx;
+}

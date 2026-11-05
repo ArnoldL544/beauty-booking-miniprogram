@@ -1,0 +1,129 @@
+.records-page {
+  padding: 30rpx 42rpx 175rpx;
+  box-sizing: border-box;
+}
+.page-heading {
+  font-size: 38rpx;
+  font-weight: 700;
+  color: #262626;
+  margin: 8rpx 0 27rpx;
+}
+.filter-scroller {
+  width: 100%;
+  white-space: nowrap;
+  margin-bottom: 22rpx;
+}
+.filters {
+  display: inline-flex;
+  gap: 15rpx;
+  padding-bottom: 12rpx;
+}
+.filter-item {
+  flex-shrink: 0;
+  background: #fff;
+  border: 1rpx solid #ece4e4;
+  border-radius: 35rpx;
+  color: #666;
+  padding: 16rpx 25rpx;
+  font-size: 25rpx;
+}
+.filter-item.is-active {
+  background: #e64340;
+  border-color: #e64340;
+  color: white;
+}
+.empty-box {
+  background: #fff;
+  border-radius: 22rpx;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  padding: 65rpx 36rpx 43rpx;
+  box-sizing: border-box;
+  box-shadow: 0 5rpx 16rpx rgba(0, 0, 0, 0.025);
+}
+.empty-icon {
+  background: #f9f2f2;
+  width: 116rpx;
+  height: 116rpx;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #c4939b;
+  font-size: 61rpx;
+}
+.empty-title {
+  font-size: 31rpx;
+  font-weight: 600;
+  margin-top: 27rpx;
+}
+.empty-desc {
+  font-size: 25rpx;
+  line-height: 1.8;
+  text-align: center;
+  color: #999;
+  margin: 18rpx 0 28rpx;
+}
+.go-button {
+  background: #e64340;
+  color: white;
+  border-radius: 16rpx;
+  padding: 0 40rpx;
+  font-size: 28rpx;
+}
+.go-button::after {
+  border: 0;
+}
+.rule-card {
+  background: #fff;
+  border-radius: 20rpx;
+  margin-top: 25rpx;
+  padding: 28rpx;
+}
+.rule-title {
+  font-size: 29rpx;
+  font-weight: 600;
+  display: flex;
+  justify-content: space-between;
+}
+.chev {
+  font-size: 35rpx;
+  color: #aaa;
+}
+.rule-text {
+  font-size: 25rpx;
+  color: #888;
+  line-height: 1.8;
+  margin-top: 14rpx;
+}
+.records-list {
+  display: flex;
+  flex-direction: column;
+  gap: 17rpx;
+}
+.record-card {
+  background: #fff;
+  border-radius: 16rpx;
+  padding: 28rpx;
+}
+.record-head {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 15rpx;
+  margin-bottom: 20rpx;
+}
+.record-title {
+  font-size: 28rpx;
+  font-weight: 600;
+}
+.status-tag {
+  color: #bf6875;
+  font-size: 23rpx;
+}
+.record-meta {
+  font-size: 25rpx;
+  color: #777;
+  line-height: 2;
+}

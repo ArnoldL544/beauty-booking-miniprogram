@@ -1,0 +1,23 @@
+<view class="info-page">
+  <view class="intro">
+    <view class="intro-title">预约须知</view>
+    <view class="intro-small">预约和支付规则</view>
+  </view>
+  <view class="card">
+    <view class="section-title">预约时间</view>
+    <view class="para">正常营业时间为每天 10:00–17:00，周末照常营业。17:00 不是严格截止时间，顾客可提交其他期望时间，由管理员人工确认。</view>
+  </view>
+  <view class="card">
+    <view class="section-title">审核与定金</view>
+    <view class="para">提交预约申请后，先由管理员确认时间；通过后顾客需在24小时内支付服务价格10%的定金。未按时支付，预约自动取消。完成定金支付后预约才正式确认。</view>
+  </view>
+  <view class="card">
+    <view class="section-title">预约改期</view>
+    <view class="para">顾客可以申请修改预约日期或时间，原已支付定金继续有效，不额外扣定金。如新时间无法安排，原预约时间不自动改变。</view>
+  </view>
+  <view class="card">
+    <view class="section-title">取消与售后</view>
+    <view class="para">商家拟采用“顾客取消预约不退定金”的规则。该条款及实际退款处理须在正式启用前确认适用法律与消费者保护要求。不同美容项目的售后期限尚待商家提供。</view>
+  </view>
+  <view class="note">本页展示当前确定的业务方案；目前小程序尚未接入真实支付和自动过期取消功能。</view>
+</view>

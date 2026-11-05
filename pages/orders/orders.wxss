@@ -1,0 +1,73 @@
+.orders-page {
+  padding: 30rpx 42rpx 130rpx;
+}
+.title {
+  font-weight: 700;
+  font-size: 39rpx;
+  margin-bottom: 25rpx;
+}
+.tabs-scroll {
+  white-space: nowrap;
+}
+.tabs {
+  display: inline-flex;
+  gap: 12rpx;
+  padding-bottom: 24rpx;
+}
+.tab {
+  padding: 14rpx 24rpx;
+  border: 1rpx solid #eee;
+  background: #fff;
+  border-radius: 32rpx;
+  color: #666;
+  font-size: 25rpx;
+}
+.tab.active {
+  background: #e64340;
+  color: #fff;
+  border-color: #e64340;
+}
+.empty {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  background: #fff;
+  border-radius: 20rpx;
+  padding: 60rpx 34rpx;
+}
+.empty-icon {
+  font-size: 70rpx;
+  color: #bd8c96;
+}
+.empty-title {
+  font-size: 30rpx;
+  font-weight: 600;
+  margin: 18rpx 0;
+}
+.empty-text,
+.tip {
+  font-size: 24rpx;
+  color: #999;
+  line-height: 1.8;
+  text-align: center;
+}
+.tip {
+  margin-top: 26rpx;
+}
+.action {
+  background: #e64340;
+  color: #fff;
+  border-radius: 15rpx;
+  margin-top: 27rpx;
+  font-size: 28rpx;
+}
+.action::after {
+  border: 0;
+}
+.order-card {
+  padding: 26rpx;
+  background: #fff;
+  border-radius: 15rpx;
+  display: flex;
+  justify-content: space-between;
+}

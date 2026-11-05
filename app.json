@@ -1,0 +1,57 @@
+{
+  "pages": [
+    "pages/index/index",
+    "pages/products/products",
+    "pages/category/category",
+    "pages/records/records",
+    "pages/mine/mine",
+    "pages/services/services",
+    "pages/styles/styles",
+    "pages/detail/detail",
+    "pages/booking/booking",
+    "pages/product-detail/product-detail",
+    "pages/orders/orders",
+    "pages/favorites/favorites",
+    "pages/address/address",
+    "pages/aftersales/aftersales",
+    "pages/guide/guide",
+    "pages/about/about",
+    "pages/contact/contact",
+    "pages/profile/profile"
+  ],
+  "window": {
+    "navigationBarTitleText": "美业工作室",
+    "navigationBarBackgroundColor": "#FFFFFF",
+    "navigationBarTextStyle": "black",
+    "backgroundColor": "#FAF8F8"
+  },
+  "tabBar": {
+    "custom": true,
+    "color": "#858585",
+    "selectedColor": "#E64340",
+    "backgroundColor": "#FFFFFF",
+    "borderStyle": "white",
+    "list": [
+      {
+        "pagePath": "pages/index/index",
+        "text": "首页"
+      },
+      {
+        "pagePath": "pages/products/products",
+        "text": "护肤品"
+      },
+      {
+        "pagePath": "pages/category/category",
+        "text": "美容预约"
+      },
+      {
+        "pagePath": "pages/records/records",
+        "text": "预约详情"
+      },
+      {
+        "pagePath": "pages/mine/mine",
+        "text": "我的"
+      }
+    ]
+  }
+}

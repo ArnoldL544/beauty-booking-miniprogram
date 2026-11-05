@@ -1,0 +1,18 @@
+<view class="about-page">
+  <view class="banner">
+    <view class="brand">美业工作室</view>
+    <view class="subtitle">美容服务与护肤品展示</view>
+  </view>
+  <view class="card">
+    <view class="title">关于我们</view>
+    <view class="text">本小程序用于浏览护肤品、了解美容服务、提交预约意向及查看相关记录。</view>
+  </view>
+  <view class="card">
+    <view class="title">业务内容</view>
+    <view class="text">美容预约：美甲美睫、纹绣、医美咨询和皮肤护理。护肤品支持提交购买申请，商家确认后快递邮寄。</view>
+  </view>
+  <view class="card">
+    <view class="title">更多信息</view>
+    <view class="text">正式商家介绍、服务地点和联系方式待提供。医美服务由具备相应资质的合作医疗机构评估、实施。</view>
+  </view>
+</view>

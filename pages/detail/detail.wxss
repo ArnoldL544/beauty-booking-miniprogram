@@ -1,0 +1,163 @@
+.page {
+  padding: 30rpx 48rpx 185rpx;
+}
+.service-title {
+  font-size: 44rpx;
+  font-weight: 700;
+  text-align: center;
+  margin: 8rpx 0 30rpx;
+}
+.hero {
+  display: block;
+  width: 100%;
+  height: 338rpx;
+  border-radius: 20rpx;
+}
+.section {
+  margin-top: 35rpx;
+  background: #fff;
+  border-radius: 20rpx;
+  padding: 30rpx;
+}
+.section-title {
+  font-size: 32rpx;
+  font-weight: 600;
+  margin-bottom: 20rpx;
+}
+.placeholder-text {
+  min-height: 95rpx;
+  font-size: 27rpx;
+  color: #aaa;
+  line-height: 1.7;
+}
+.medical-notice {
+  border-left: 6rpx solid #e9a4a4;
+  padding: 16rpx 20rpx;
+  background: #fff7f7;
+  font-size: 23rpx;
+  color: #886b6b;
+  line-height: 1.7;
+}
+.comparison-placeholder {
+  background: #f7f2f2;
+  color: #aa9999;
+  height: 230rpx;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 16rpx;
+  font-size: 25rpx;
+}
+.gallery-placeholder {
+  display: flex;
+  gap: 12rpx;
+  margin-top: 18rpx;
+}
+.mini-placeholder {
+  flex: 1;
+  height: 110rpx;
+  background: #f8f5f5;
+  border-radius: 12rpx;
+  text-align: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #b6a5a5;
+  font-size: 19rpx;
+}
+.style-note {
+  margin-top: 30rpx;
+  font-size: 24rpx;
+  color: #888;
+  line-height: 1.6;
+}
+.bottom-action {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background: #fff;
+  padding: 18rpx 48rpx calc(18rpx + env(safe-area-inset-bottom));
+  box-shadow: 0 -4rpx 18rpx rgba(0, 0, 0, 0.04);
+}
+.btn {
+  border-radius: 16rpx;
+  color: #fff;
+  font-size: 32rpx;
+}
+.contact-btn {
+  background: #e64340;
+}
+.booking-btn {
+  background: #2778ef;
+}
+.disabled-btn {
+  background: #b8b8b8;
+}
+
+.choice-hint {
+  font-size: 25rpx;
+  color: #777;
+  padding-bottom: 14rpx;
+}
+.tier-list {
+  display: flex;
+  flex-direction: column;
+  gap: 14rpx;
+}
+.tier-option {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 22rpx 26rpx;
+  border: 2rpx solid #e7dede;
+  border-radius: 14rpx;
+  background: #fff;
+  color: #333;
+  font-size: 27rpx;
+}
+.tier-selected {
+  border-color: #e64340;
+  background: #fff3f3;
+  color: #c53232;
+}
+.fixed-price {
+  color: #e64340;
+  font-size: 34rpx;
+  font-weight: 600;
+}
+.price-note {
+  font-size: 23rpx;
+  line-height: 1.7;
+  margin-top: 18rpx;
+  color: #897777;
+}
+
+.favorite-service {
+  display: flex;
+  align-items: center;
+  gap: 12rpx;
+  color: #b9717d;
+  background: #fff3f4;
+  border-radius: 36rpx;
+  margin-top: 22rpx;
+  padding: 14rpx 24rpx;
+  font-size: 25rpx;
+  max-width: max-content;
+}
+.favorite-heart {
+  font-size: 32rpx;
+}
+
+.nail-selected-row {
+  display: flex;
+  justify-content: space-between;
+  gap: 16rpx;
+  border-bottom: 1rpx solid #f1ecec;
+  padding: 16rpx 0;
+  font-size: 26rpx;
+}
+.nail-selected-price {
+  color: #e64340;
+  white-space: nowrap;
+}

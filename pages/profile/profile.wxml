@@ -1,0 +1,14 @@
+<view class="profile-page">
+  <view class="avatar">人</view>
+  <view class="heading">微信用户</view>
+  <view class="sub">尚未连接微信登录和个人信息数据库</view>
+  <view class="card">
+    <view class="row">
+      <text>昵称</text><text class="unconfigured">待授权设置</text>
+    </view>
+    <view class="row">
+      <text>手机号</text><text class="unconfigured">未绑定</text>
+    </view>
+  </view>
+  <view class="tip">将来登录时会征求必要授权。当前仅作前端界面展示，不会读取你的头像、手机号或私人信息。</view>
+</view>

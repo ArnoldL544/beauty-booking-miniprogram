@@ -1,0 +1,62 @@
+.tab-bar {
+  position: fixed;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  height: 116rpx;
+  padding-bottom: env(safe-area-inset-bottom);
+  background-color: #ffffff;
+  border-top: 1rpx solid #eeeeee;
+  box-sizing: content-box;
+  display: flex;
+  align-items: center;
+  z-index: 999;
+}
+.tab-item {
+  flex: 1;
+  height: 116rpx;
+  min-width: 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  color: #868686;
+}
+.tab-icon {
+  width: 44rpx;
+  height: 44rpx;
+  margin-bottom: 6rpx;
+}
+.tab-label {
+  font-size: 20rpx;
+  line-height: 28rpx;
+  white-space: nowrap;
+}
+.tab-selected {
+  color: #e64340;
+}
+.tab-center {
+  justify-content: flex-start;
+}
+.booking-circle {
+  width: 104rpx;
+  height: 104rpx;
+  box-sizing: border-box;
+  margin-top: -34rpx;
+  background-color: #e64340;
+  border: 6rpx solid #ffffff;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 5rpx 16rpx rgba(230, 67, 64, 0.22);
+}
+.booking-symbol {
+  color: #ffffff;
+  font-size: 62rpx;
+  line-height: 1;
+}
+.center-label {
+  margin-top: 4rpx;
+  color: #e64340;
+}

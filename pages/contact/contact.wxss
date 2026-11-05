@@ -1,0 +1,38 @@
+.contact-page {
+  padding: 40rpx 42rpx;
+}
+.top {
+  font-size: 40rpx;
+  font-weight: 700;
+  margin-bottom: 25rpx;
+}
+.card {
+  background: #fff;
+  border-radius: 20rpx;
+  padding: 35rpx;
+}
+.line-title {
+  font-size: 30rpx;
+  font-weight: 600;
+}
+.line-sub,
+.note {
+  font-size: 26rpx;
+  line-height: 1.8;
+  color: #888;
+  margin-top: 18rpx;
+}
+.disabled {
+  background: #e64340;
+  color: #fff;
+  margin-top: 30rpx;
+  border-radius: 14rpx;
+  font-size: 27rpx;
+}
+.disabled::after {
+  border: 0;
+}
+.note {
+  font-size: 23rpx;
+  padding: 12rpx;
+}
